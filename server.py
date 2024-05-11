@@ -90,4 +90,5 @@ def delete_user():
 
 # if __name__ == "__main__":
 create_table()
-app.run()
+port = int(os.environ.get('PORT', 10000))  # Use port 10000 if PORT is not set
+app.run(host='0.0.0.0', port=port)
